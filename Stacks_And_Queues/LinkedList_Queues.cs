@@ -27,12 +27,26 @@ namespace Stacks_And_Queues
             }
             Console.WriteLine("{0} inserted into Queue", node.data);
         }
+        internal void Dequeue(int data)
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is Empty");
+            }
+            Node temp = this.head;
+            this.head = this.head.next;
+            if (this.head == null)
+            {
+                this.head = null;
+            }
+            Console.WriteLine("Item Delete is {0}", temp.data);
+        }
         internal void Display()
         {
             Node temp = this.head;
             if (temp == null)
             {
-                Console.WriteLine("Queue is empty");
+                Console.WriteLine("Queue is Empty");
                 return;
             }
             while (temp != null)
@@ -40,8 +54,6 @@ namespace Stacks_And_Queues
                 Console.WriteLine(temp.data + " ");
                 temp = temp.next;
             }
-
-
         }
     }
 }
