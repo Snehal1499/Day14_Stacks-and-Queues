@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stacks_And_Queues
 {
+
     internal class LinkedListStack
     {
         private Node top;
